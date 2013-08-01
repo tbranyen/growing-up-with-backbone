@@ -1,11 +1,11 @@
 Making your JavaScript as small as possible and still debuggable.
 =================================================================
 
-<img src="/images/network.png">
+<img src="images/network.png">
 
 <span class="styled">VVVV</span>
 
-<img src="/images/debug.png">
+<img src="images/debug.png">
 
 <style scoped>
   @host {

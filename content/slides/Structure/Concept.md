@@ -1,6 +1,6 @@
 # The concept behind building your application instead of delivering it raw is that you get a smaller bundle and more easily distribute more maintainable code.
 
-<img src="/images/gruntjs.png">
+<img src="images/gruntjs.png">
 
 <style scoped>
   @host {
