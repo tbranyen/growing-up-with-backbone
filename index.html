@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Growing Up With Backbone</title>
+
+  <script type="text/javascript" src="//use.typekit.net/fej0czv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body class="preload tk-museo">
+  
+  <slide-item id="1">
+    <h1>Growing <span class="up">Up</span> With Backbone</h1>
+<div><img src="/images/tree.png"></div>
+
+<style scoped>
+  @host {
+    background: #E8E8E8;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 42px;
+    color: #333;
+    padding-top: 70px;
+  }
+
+  .up {
+    color: #E8E8E8;
+  }
+
+  div {
+    position: absolute;
+    z-index: -1;
+    width: 2079px;
+    left: 50%;
+    bottom: -61px;
+    margin-left: -1242px;
+    height: 314%;
+  }
+
+  div img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<p><slide-notes>
+Hi Tim, Good luck! You&#39;re gonna need it.
+</slide-notes></p>
+
+  </slide-item>
+  <slide-index>Slide #1</slide-index>
+  
+  <slide-item id="2">
+    <h1>Through the nature of the web we, <span class="as">as frontend developers</span>, have become independent framework authors.</h1>
+<style scoped>
+  @host {
+    background: #444;
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .as {
+    color: #999;
+  }
+</style>
+
+<script type="none" slide-notes>
+This means that as developers we have to think about how to customize our
+tools that lint, build, install our dependencies, load our modules, etc.
+
+Development is actually a lot easier than we make it out to be, its just a
+small subset of tools that virtually every server side environment provides.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #2</slide-index>
+  
+  <slide-item id="3">
+    <h1>Learn to <span class="structure">structure</span> your application with <span class="modules">modular</span> techniques that support <span class="components">components</span>.</h1>
+<style scoped>
+  @host {
+    background: #333;
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .structure {
+    color: #37CDF3;
+  }
+
+  .modules {
+    color: #55F337;
+  }
+
+  .components {
+    color: #F33737;
+  }
+
+  .data-binding {
+    color: #F3C637;
+  }
+</style>
+
+<script type="none" slide-notes>
+* Structure is important, anecdotally I've found it has helped numerous
+  developers get started on a project when it's well organized.
+
+* Modular techniques provide an easier way to think about any kind of code and
+  how it's loaded.  I find they are especially suited to Web Components
+  mentality.
+
+* Web Components are "yet-another-shift" in thinking about how you build a web
+  application.
+
+* Data binding is important enough of a *thing* that the Polymer project is
+  working on a "spec" called MDV.  Ractive recently got a lot of attention and
+  it's perfectly suited to Backbone.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #3</slide-index>
+  
+  <slide-item id="4">
+    <div class="linux">
+  <h1>Linux philsophy</h1>
+
+  <img src="/images/simplicity.png">
+</div>
+
+
+<div class="apple">
+  <h1>Apple philosophy</h1>
+
+  <iframe width="620" height="330" src="http://www.youtube.com/embed/QhhFQ-3w5tE" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<style scoped>
+  @host {
+    background: #222;
+    -webkit-box-orient: horizontal;
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .linux {
+    -webkit-flex: 0 .5;
+    margin-right: 10px;
+  }
+
+  .apple {
+    -webkit-flex: .5;
+  }
+</style>
+
+<script type="none" slide-notes>
+* They are not mutual exclusive either.
+
+* Fast forward point is 25 min on the nose.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #4</slide-index>
+  
+  <slide-item id="5">
+    <h1>Improving Web Application structure.</h1>
+<p><span class="styled">
+Don&#39;t worry about modules or frameworks or anything, but the browser and
+JavaScript.
+</span></p>
+<pre><code class="lang-javascript">&lt;script src=&quot;?&quot;&gt;&lt;/script&gt;</code></pre>
+<style scoped>
+  @host {
+    background-color: hsl(192, 89%, 20%);
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .styled {
+    color: #FFF;
+    opacity: .4;
+    opacity: .4;
+  }
+
+  pre {
+    min-width: 0 !important;
+  }
+</style>
+
+<script type="none" slide-notes>
+Was talking to Mike P. about how frameworks and modules don't have much to do
+with your structure and he mentioned how something like UMD can exist is a good
+example of that.
+
+We develop in JavaScript (or CoffeeScript) and push to browsers (when talking
+specifically about web apps).
+
+Tab 2
+-----
+
+  * GitHub Viewer refactor branch.
+    - Grunt build process.
+  * Chrome open.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #5</slide-index>
+  
+  <slide-item id="6">
+    <h1>The concept behind building your application instead of delivering it raw is that you get a smaller bundle and more easily distribute more maintainable code.</h1>
+<p><img src="/images/gruntjs.png"></p>
+<style scoped>
+  @host {
+    background-color: hsl(192, 65%, 26%);
+    color: #FFF;
+  }
+
+  img {
+    border: none;
+  }
+</style>
+
+<script type="none" slide-notes>
+- Not new to a lot of developers who are already using
+  transpilers/preprocessors.
+
+- If you are new to something like this, it can seem rather daunting since you
+  are either at the whim of your server guys who are deploying or rolling your
+  own thing even though something that probably already does it exists.
+
+- I greatly recommend using something like Grunt.  I've used Jake, Make, and
+  rolled my own builder in the past.  I've found that Grunt was written by
+  someone doing the tasks we need to do.
+
+- Talking about Grunt rest of the slides since that's what Backbone Boilerplate
+  uses and what I'm committed to using.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #6</slide-index>
+  
+  <slide-item id="7">
+    <h1>Third party rules.</h1>
+<p>Separate <span class="your">your code</span> from any <span
+class="third">third-party code</span> in your application.</p>
+<pre><code class="lang-markup">.
+├── app
+│   └── modules
+└── vendor
+
+3 directories, 0 files</code></pre>
+<style scoped>
+  @host {
+    background-color: hsl(192, 64%, 29%);
+    color: #FFF;
+  }
+
+  .your, .third {
+    opacity: .5;
+    text-decoration: underline;
+  }
+
+</style>
+
+<script type="none" slide-notes>
+- What you mean here is that there is a separation from where you are putting
+  your modular code, from say, where a third party vendor's code is.
+
+- This is useful for a number of reasons, including treating your code with a
+  higher standard of quality by using stricter linting.  You may want to
+  transpile your code from ES6 into AMD.  CoffeeScript into JavaScript.
+
+- Keep it separate and globbing becomes much easier.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #7</slide-index>
+  
+  <slide-item id="8">
+    <h1>Cleaning and Linting.</h1>
+<p>Linting can be provided by your code editor and cleaning out a directory is not
+a slide-worthy task.</p>
+<style scoped>
+  @host {
+    background-color: hsl(192, 43%, 34%);
+  }
+</style>
+
+<script type="none" scoped>
+- Starting a build with linted code, and a clean, reset, environment is a good
+way to start.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #8</slide-index>
+  
+  <slide-item id="9">
+    <h1>Rewriting sources.</h1>
+<p>A common task is being able to rewrite your development source from your
+production source.  This is especially true when using something like
+RequireJS.</p>
+<pre><code class="lang-bash">npm install grunt-processhtml</code></pre>
+<pre><code class="lang-markup">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+  &lt;title&gt;GitHub Viewer&lt;/title&gt;
+
+  &lt;!-- Application styles. --&gt;
+  &lt;!-- build:[href] /styles.css --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/app/styles/index.css&quot;&gt;
+  &lt;!-- /build --&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!-- Application container. --&gt;
+  &lt;main role=&quot;main&quot; id=&quot;main&quot;&gt;&lt;/main&gt;
+
+  &lt;!-- Application source. --&gt;
+  &lt;!-- build:[src] /source.min.js --&gt;
+  &lt;script data-main=&quot;/app/main&quot; src=&quot;/vendor/bower/requirejs/require.js&quot;&gt;&lt;/script&gt;
+  &lt;!-- /build --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<style scoped>
+  @host {
+    background-color: hsl(192, 43%, 34%);
+  }
+
+  pre {
+    width: 900px;
+  }
+</style>
+
+<script type="none" slide-notes>
+- Plugin: https://github.com/dciccale/grunt-processhtml
+
+- There are other completely valid ways of doing this, I've just found it works
+  incredibly well (since I've already been using something similar, called
+  grunt-targethtml).
+
+- Main benefit is that you can stay in HTML and do not require any special
+  processing of your HTML during development.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #9</slide-index>
+  
+  <slide-item id="10">
+    <h1>Making your JavaScript as small as possible and still debuggable.</h1>
+<p><img src="/images/network.png"></p>
+<p><span class="styled">VVVV</span></p>
+<p><img src="/images/debug.png"></p>
+<style scoped>
+  @host {
+    background-color: hsl(192, 34%, 43%);
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .styled {
+    color: #FFF;
+    opacity: .4;
+    opacity: .4;
+  }
+
+  pre {
+    min-width: 0 !important;
+  }
+</style>
+
+<script type="none" slide-notes>
+Source Maps support:
+
+Shaky at best right now.  Two different implementations:
+
+https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit
+
+The generated code may include a line at the end of the source, with the following form:
+
+//# sourceMappingURL=<url>
+
+Note: The prefix for this annotation was initially “//@” however this conflicts with Internet Explorer’s Conditional Compilation and was changed to “//#”.  It is reasonable for tools to also accept “//@” but “//#” is preferred.
+
+
+
+* Django: https://github.com/miracle2k/webassets
+* Rails: https://github.com/rails/sprockets-rails/ (Not much information on it).
+* Node: https://github.com/mishoo/UglifyJS2
+</script>
+
+  </slide-item>
+  <slide-index>Slide #10</slide-index>
+  
+  <slide-item id="11">
+    <h1>You can switch <span class="styled">any</span> technology out.  Understand its <span class="styled">role</span> and why it&#39;s important.</h1>
+<style scoped>
+  @host {
+    background-color: hsl(192, 31%, 56%);
+  }
+
+  h1 {
+    color: #FFF;
+  }
+
+  .styled {
+    color: #FFF;
+    opacity: .4;
+    opacity: .4;
+  }
+</style>
+
+<script type="none" slide-notes>
+If you know how to do this already in another framework or task runner, then
+use it! No excuse.  I don't see nearly enough developers implementing source
+maps.
+
+Make it trivial! This is something you learn once and iterate on.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #11</slide-index>
+  
+  <slide-item id="12">
+    <h1>Architecting your application with modules will make your code easier to test and maintain.</h1>
+<style scoped>
+  @host {
+    background-color: #43A331;
+    color: #FFF;
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #12</slide-index>
+  
+  <slide-item id="13">
+    <p><img src="/images/mockup.png"></p>
+<style scoped>
+  @host {
+    background-color: #50AA3F;
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #13</slide-index>
+  
+  <slide-item id="14">
+    <h1>Universal Module Definition</h1>
+<pre><code class="lang-javascript">(function(window, factory) {
+  if (typeof exports === &quot;object&quot;) {
+    // Node. Does not work with strict CommonJS, but only CommonJS-like
+    // enviroments that support module.exports, like Node.
+    module.exports = factory();
+  } else if (typeof define === &quot;function&quot; &amp;&amp; define.amd) {
+    // Allow using this built library as an AMD module in another project. That
+    // other project will only see this AMD call, not the internal modules in
+    // the closure below.
+    define(factory);
+  } else {
+    // Browser globals case. Just assign the result to a property on the
+    // global.
+    window.WebApp = factory();
+  }
+}(this, function() {
+
+  // Your code goes here.
+
+}));</code></pre>
+<style scoped>
+  @host {
+    background-color: #5CB14C;
+    color: #FFF;
+  }
+</style>
+
+<script type="none" slide-notes>
+No wonder why nobody wants to do write cross compatible modules in JavaScript.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #14</slide-index>
+  
+  <slide-item id="15">
+    <script type="none" slide-notes>
+  - Compiling from ES6 to AMD.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #15</slide-index>
+  
+  <slide-item id="16">
+    <h1>Shimming.</h1>
+<p>How would you load JavaScript that wasn&#39;t compatible with your module loader?</p>
+<pre><code class="lang-javascript">require.config({
+  paths: {
+    &quot;some-plugin&quot;: &quot;./path/to/some-plugin&quot;
+  },
+
+  shim: {
+    &quot;some-plugin&quot;: {
+      deps: [&quot;jquery&quot;],
+      exports: &quot;SomePlugin&quot;
+    }
+  }
+});</code></pre>
+<style scoped>
+  @host {
+    background-color: #60B84F;
+    color: #FFF;
+  }
+</style>
+
+<script type="none" slide-notes>
+  - Necessary because there is no other way to load this JS.
+
+  1: Mapping the source to a friendly name.
+  2: Using that friendly name to make a definition.
+
+  - Effectively allows you to map global JavaScript to a module system.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #16</slide-index>
+  
+  <slide-item id="17">
+    <h1>Package Managers.</h1>
+<p>Brings third party code to a higher class citizen in your project.</p>
+<style scoped>
+  @host {
+    background-color: #72C561;
+    color: #FFF;
+  }
+</style>
+
+<script type="none" slide-notes>
+  - Bower - has packages I need.
+  - Jam - has the config management I want.
+  - NPM - have their shit together
+
+  - Talk about configuration files here too.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #17</slide-index>
+  
+  <slide-item id="18">
+    <h1>Build only what you reference.</h1>
+<p>Treat your script loader as a resource loader.</p>
+<style scoped>
+  @host {
+    background-color: #84D374;
+    color: #FFF;
+  }
+</style>
+
+<script type="none" slide-notes>
+  - Ensures only templates that have been referenced are built.
+  - Only CSS that's referenced gets injected.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #18</slide-index>
+  
+  <slide-item id="19">
+    <h1>Never modify state of your objects inside the root application object.</h1>
+<style scoped>
+  @host {
+    background-color: #84D374;
+    color: #FFF;
+  }
+</style>
+
+<script type="none" slide-notes>
+  - This will affect testing and cause weird effects.
+
+  - Unless you're patching other libraries that aren't being tested like
+    Backbone.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #19</slide-index>
+  
+  <slide-item id="20">
+    <h1>Decouple the application running from the configuration loading.</h1>
+<p>RequireJS specific.</p>
+<style scoped>
+  @host {
+    background-color: #84D374;
+    color: #FFF;
+  }
+</style>
+
+<script type="none" slide-notes>
+  - This will affect testing and cause weird effects.
+
+  - Unless you're patching other libraries that aren't being tested like
+    Backbone.
+</script>
+
+  </slide-item>
+  <slide-index>Slide #20</slide-index>
+  
+  <slide-item id="21">
+    <h1>What are Web Components?</h1>
+<div class="wrap">
+  <p class="subject">A collective of five W3C Recommendations.</p>
+</div>
+
+<p><strong>Templates</strong>, <strong>Decorators</strong>, <strong>Custom Elements</strong>, <strong>Shadow DOM</strong>, <strong>Imports</strong> <span class="remaining"><strong>&amp; MDV</strong></span></p>
+<style scoped>
+  @host {
+    background: hsl(0, 90%, 30%);
+    color: #FFF;
+  }
+
+  .wrap {
+    margin-bottom: 120px;
+  }
+
+  .subject {
+    background: rgba(255, 255, 255, .5);
+    padding: 10px;
+    color: #333;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 33px;
+    margin-top: -15px;
+    top: 50%;
+    text-align: center;
+  }
+
+  .remaining {
+    color: rgba(255, 255, 255, .5);
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #21</slide-index>
+  
+  <slide-item id="22">
+    <h1>Single vs. Multiple Views.</h1>
+<p><img src="/images/test.png"></p>
+<style scoped>
+  @host {
+    background: hsl(0, 58%, 42%);
+    color: #FFF;
+  }
+</style>
+
+
+  </slide-item>
+  <slide-index>Slide #22</slide-index>
+  
+  <slide-item id="23">
+    <h1>Markup or Source driven definitions?</h1>
+<p>Can either be assembled in the client markup:</p>
+<pre><code class="lang-markup">&lt;element&gt;
+  &lt;template&gt;&lt;/template&gt;
+  &lt;style&gt;&lt;/style&gt;
+  &lt;script&gt;({ someMethod: function() {} })&lt;/script&gt;
+&lt;/element&gt;</code></pre>
+<p>Or can be assembled entirely in script:</p>
+<pre><code class="lang-javascript">Component.extend({
+  template: &quot;&quot;,
+  style: &quot;&quot;,
+
+  // This is the script.
+  someMethod: function() {}
+});</code></pre>
+<style scoped>
+  @host {
+    background: hsl(0, 49%, 48%);
+    color: #FFF;
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #23</slide-index>
+  
+  <slide-item id="24">
+    <h1>Decorators, melting pot example.</h1>
+<pre><code class="lang-markup">&lt;style&gt;
+details {
+    decorator: url(#details-closed);
+}
+details[open] {
+    decorator: url(#details-open);
+}
+&lt;/style&gt;
+
+&lt;decorator id=&quot;details-closed&quot;&gt;
+    &lt;script&gt;
+        function clicked(event) {
+            event.target.setAttribute(&#39;open&#39;, &#39;open&#39;);
+        }
+        [{selector: &#39;#summary&#39;, type: &#39;click&#39;, handler: clicked}];
+    &lt;/script&gt;
+    &lt;template&gt;
+        &lt;a id=&quot;summary&quot;&gt;
+            &amp;blacktriangleright; &lt;content select=&quot;summary&quot;&gt;&lt;/content&gt;
+        &lt;/a&gt;
+    &lt;/template&gt;
+&lt;/decorator&gt;
+
+&lt;decorator id=&quot;details-open&quot;&gt;
+    &lt;!-- as illustrated above --&gt;</code></pre>
+<style scoped>
+  @host {
+    background: hsl(0, 51%, 56%);
+    color: #FFF;
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #24</slide-index>
+  
+  <slide-item id="25">
+    <h1>Dynamic Components.</h1>
+<p>An alternative to piecing together DOM snippets to define a dynamic component,
+take it more </p>
+<pre><code class="lang-javascript">var MyComponent = Backbone.Component.extend({
+  // Define a custom element or selector.
+  tagName: &quot;my-component&quot;,
+
+  // Custom styles to be applied only to this component.
+  style: &quot;@host { font-weight: bold; } p { color: red; }&quot;,
+
+  // Bind DOM events to only instances of this component.
+  events: {
+    &quot;click p&quot;: &quot;showAlert&quot;
+  },
+
+  // Event handlers are exactly the same as Backbone.View.
+  showAlert: function(ev) {
+    alert(ev.target.innerHTML);
+  }
+});</code></pre>
+<style scoped>
+  @host {
+    background: hsl(0, 60%, 66%);
+    color: #FFF;
+  }
+
+  pre {
+    width: 100%;
+  }
+
+  pre code {
+    line-height: 23px;
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #25</slide-index>
+  
+  <slide-item id="26">
+    <h1>Templates.</h1>
+<p>Nervous about these in the spec, because it will eventually advocate a specific
+template engine.</p>
+<style scoped>
+  @host {
+    background: hsl(0, 59%, 76%);
+    color: #333;
+  }
+
+  pre {
+    width: 100%;
+  }
+
+  pre code {
+    line-height: 23px;
+  }
+</style>
+
+
+  </slide-item>
+  <slide-index>Slide #26</slide-index>
+  
+  <slide-item id="27">
+    <h1>Scoped CSS.</h1>
+<p>Currently part of the HTML5 specification.</p>
+<p>Inline scoped CSS.</p>
+<pre><code class="lang-markup">&lt;h1&gt;Hi&lt;/h1&gt;
+&lt;div&gt;
+  &lt;h1&gt;You&lt;/h1&gt;
+  &lt;style scoped&gt;
+    h1 { color: red; }
+  &lt;/style&gt;
+&lt;/div&gt;</code></pre>
+<p>Dynamically scoped CSS.</p>
+<pre><code class="lang-javascript">new ScopedCss(&quot;.some-selector&quot;, &quot;someCss&quot;).appendTo($(&quot;body&quot;));</code></pre>
+<style scoped>
+  @host {
+    background: #FFF;
+    color: #333;
+  }
+
+  pre {
+    width: 100%;
+  }
+
+  pre code {
+    line-height: 23px;
+  }
+</style>
+
+  </slide-item>
+  <slide-index>Slide #27</slide-index>
+  
+  <slide-item id="28">
+    
+  </slide-item>
+  <slide-index>Slide #28</slide-index>
+  
+
+  <script src="vendor/scopedcss.js"></script>
+  <script src="vendor/jquery.js"></script>
+  <script src="vendor/underscore.js"></script>
+  <script src="vendor/backbone.js"></script>
+  <script src="vendor/backbone.layoutmanager.js"></script>
+  <script src="vendor/backbone.component.js"></script>
+  <script src="vendor/prism/prism.js"></script>
+
+  <script src="components/slide-item/script.js"></script>
+  <script src="source/load.js"></script>
+  <script src="http://127.0.0.1:35729/livereload.js"></script>
+</body>
+</html>

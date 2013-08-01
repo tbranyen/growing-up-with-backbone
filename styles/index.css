@@ -1,0 +1,9 @@
+@import "../vendor/prism/prism.css";
+
+body {
+  overflow: hidden;
+}
+
+.preload slide-item {
+  -webkit-transition: none !important;
+}
