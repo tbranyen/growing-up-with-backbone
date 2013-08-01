@@ -37,5 +37,3 @@ document.addEventListener("keyup", function(evt) {
     location.hash = index;
   }
 }, true);
-
-

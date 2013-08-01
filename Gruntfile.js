@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   var marked = require("marked");
   var fs = require("fs");
   var _ = grunt.util._;
+  var pkg = require("./package");
 
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-connect");
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
     });
 
     // Augment the main slide deck entry.
-    grunt.file.write("index.html", template({ slides: slides }));
+    grunt.file.write("index.html", template({ slides: slides, pkg: pkg }));
   });
 
   // Generate fresh slides and run the watch task for changes.

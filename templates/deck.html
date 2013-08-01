@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Growing Up With Backbone</title>
+  <title><%= pkg.name.replace(/_/g, " ") %></title>
 
   <script type="text/javascript" src="//use.typekit.net/fej0czv.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -13,13 +13,16 @@
 </head>
 
 <body class="preload tk-museo">
+  <!-- This iterates over all slides and injects them into `index.html` -->
   <% slides.forEach(function(slide, i) { %>
-  <slide-item id="<%= i+1 %>">
-    <%= slide %>
-  </slide-item>
-  <slide-index>Slide #<%= i+1 %></slide-index>
+    <slide-item id="<%= i+1 %>">
+      <%= slide %>
+    </slide-item>
+
+    <slide-index>Slide #<%= i+1 %></slide-index>
   <% }); %>
 
+  <!-- Third-party. -->
   <script src="vendor/scopedcss.js"></script>
   <script src="vendor/jquery.js"></script>
   <script src="vendor/underscore.js"></script>
@@ -28,8 +31,11 @@
   <script src="vendor/backbone.component.js"></script>
   <script src="vendor/prism/prism.js"></script>
 
+  <!-- Load the slide item component. -->
   <script src="components/slide-item/script.js"></script>
   <script src="source/load.js"></script>
+
+  <!-- Livereload is useful for development. -->
   <script src="http://127.0.0.1:35729/livereload.js"></script>
 </body>
 </html>
