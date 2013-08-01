@@ -1,4 +1,4 @@
-<img src="/images/mockup.png">
+<img src="images/mockup.png">
 
 <style scoped>
   @host {

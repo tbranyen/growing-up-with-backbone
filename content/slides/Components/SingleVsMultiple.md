@@ -1,7 +1,7 @@
 Single vs. Multiple Views.
 ==========================
 
-<img src="/images/test.png">
+<img src="images/test.png">
 
 <style scoped>
   @host {

@@ -1,7 +1,7 @@
 Growing <span class="up">Up</span> With Backbone
 ================================================
 
-<div><img src="/images/tree.png"></div>
+<div><img src="images/tree.png"></div>
 
 <style scoped>
   @host {

@@ -1,7 +1,7 @@
 <div class="linux">
   <h1>Linux philsophy</h1>
 
-  <img src="/images/simplicity.png">
+  <img src="images/simplicity.png">
 </div>
 
 
