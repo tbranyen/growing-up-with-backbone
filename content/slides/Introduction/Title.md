@@ -38,6 +38,6 @@ Growing <span class="up">Up</span> With Backbone
   }
 </style>
 
-<slide-notes>
+<script type="none" slide-notes>
 Hi Tim, Good luck! You're gonna need it.
-</slide-notes>
+</script>
